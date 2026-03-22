@@ -231,13 +231,6 @@ export default function ContentEditorModal({ enabled }: ContentEditorModalProps)
                                 >
                                   Restore Default
                                 </button>
-                                <button
-                                  type="button"
-                                  onClick={() => setStatusMessage("Changes saved for this browser.")}
-                                  className="rounded-lg border border-[#00B5C5]/30 bg-[#00B5C5]/10 px-3 py-2 text-xs font-semibold text-[#0E4D8B] hover:bg-[#00B5C5]/20"
-                                >
-                                  Save Changes
-                                </button>
                               </div>
                             </div>
                           ))}

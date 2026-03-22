@@ -45,6 +45,7 @@ function getInitialMap(): EditableImageMap {
     }
     return next;
   } catch {
+    console.warn("Prototype editable content in localStorage was invalid and has been reset.");
     window.localStorage.removeItem(EDITABLE_CONTENT_STORAGE_KEY);
     return defaults;
   }
