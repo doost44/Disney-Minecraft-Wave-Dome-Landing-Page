@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
-const repoName = "Disney-Minecraft-Wave-Dome-Landing-Page";
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1];
 
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  ...(isGithubActions && {
+  ...(isGithubActions && repoName && {
     basePath: `/${repoName}`,
     assetPrefix: `/${repoName}/`,
   }),
